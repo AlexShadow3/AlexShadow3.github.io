@@ -1,0 +1,164 @@
+html {
+    background-color: rgb(109, 35, 35);
+    background-image:url(../images/Background.jpeg);
+    background-size: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#oralta {
+    color: white;
+    background-color: rgb(97, 32, 32);
+    padding: 1%;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1%;
+}
+
+#alexandrebobis {
+    color: white;
+    background-color: rgb(97, 32, 32);
+    padding: 1%;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#oralta:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(150, 150, 150);
+}
+
+#alexandrebobis:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(150, 150, 150);
+}
+
+.Meliodas {
+    margin-top: 15%;
+    text-align: center;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Meliodas img {
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.Oralta {
+    margin-top: 10%;
+    text-align: center;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Oralta img {
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+footer {
+    color: whitesmoke;
+}
+
+/* NAVBAR */
+
+.primary-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+.container {
+    max-width: 120rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.navbar {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    transition: height 0.25s;
+}
+
+.logo {
+    transition: color .25s;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #151515;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #d3d3d3;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin-left: 5rem;
+    margin-right: auto;
+}
+
+.nav-link {
+    transition: color .25s;
+    text-decoration: none;
+    color: #151515;
+}
+
+.nav-link:hover {
+    color: #d3d3d3;
+}
+
+.button {
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    transition: background-color 0.25s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #d3d3d3;
+}
+
+header.active {
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+
+header.active .navbar {
+    height: 6rem;
+}
+
+header.active .logo, header.active .nav-link {
+    color: #313131;
+}
+
+header.active .nav-link:hover {
+    color: #808080;
+}
+
+header.active .button {
+    background-color: #313131;
+    color: #fff;
+}
+
+header.active .button:hover {
+    background-color: #151515;
+}
