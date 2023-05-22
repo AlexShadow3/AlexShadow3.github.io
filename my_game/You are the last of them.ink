@@ -69,7 +69,7 @@ Five minute past... A CRAB !!!
 # IMAGE: ../images/crab.png
 You have to catch it.
 
-* [Catch]
++ [Catch]
 ~food += RANDOM(1, 3)
 Well done, you caught it. Your current food supply is {food}.
 ->setup0
@@ -135,18 +135,17 @@ You're waking up, strongly breathing. You know where you are, you are looking ar
 
 === next ===
 
-You have {food} supplies of food, {wood} supplies of stickwood and {water} supplies of water. What do you want to do ?
+You have {food} {food > 1:supplies|supply} of food, {wood} {wood > 1:supplies|supply} of stickwood and {water} {water > 1:supplies|supply} of water. What do you want to do ?
 
 + [Fish] -> fish
 + [Catch wood] -> forest1
 + [Catch rocks] -> stone
-{explorationPiecePuzzle == 0:
-    + [Explore] -> explore0
-- else:
-    * [Explore] -> explore1
-    + [Filter water] -> filterwater
-    + [Drink] -> drink
-}
+Let's explore...
++ {explorationPiecePuzzle < 1} [Explore] -> explore0
+* {explorationPiecePuzzle > 0}[Explore] -> explore1
+I should try this water filter
++ {explorationPiecePuzzle > 0}[Filter water] -> filterwater
++ {explorationPiecePuzzle > 0}[Drink] -> drink
 + [Eat] -> eat
 + [Sleep] -> sleep
 
@@ -241,12 +240,9 @@ A monkey offers you to exchange, here is the list of possible exchanges:
 
 + [5 fishes against 3 stickwood] -> fishexchange
 + [5 rocks against 3 stickwood] -> rockexchange
-+ [10 of wood against 6 of water]
-{monkeyPiecePuzzle==0:
-    + [100 stickwood against a mystery object] -> mysteryobject
-- else:
-    * [Piece already bought] ->exchange
-}
++ [10 of wood against 6 of water] -> waterexchange
++ {monkeyPiecePuzzle < 1}[100 stickwood against a mystery object] -> mysteryobject
+* {monkeyPiecePuzzle > 0} [Piece already bought] ->exchange
 + [Catch wood] ->catchwood
 + [Return to the beach] -> next
 
@@ -295,6 +291,7 @@ You return to the beach.
 
 === mysteryobject ===
 
+# IMAGE: ../images/mystery.png
 {wood>100:
    You realize you don't have enough wood to exchange. You need to cut wood.-> exchange
 - else:
@@ -342,7 +339,8 @@ You decided to explore, so let's try to find Something
 You walk for twenty minutes and fall on a tent. You try to call someone, but nothing...
 You enter in it, there is just a parrot, it is asking for help, you approach him.
 It is asking you for fishes, stones and letting him escape from his little cage...
-{rock>=10 && fish>=10:
+You need 20 rocks and 20 fishes
+{rock>=20 && fish>=20:
     You give it what you have and it thanks you.
     In return, it gives you a puzzle piece and a water filter.
     ~puzzlePieces += 1
@@ -357,7 +355,7 @@ It is asking you for fishes, stones and letting him escape from his little cage.
 === explore1 ===
 
 # IMAGE: ../images/tent.png
-You decided to explore, so let's try to find Something
+You decided to explore, so let's try to find something.
 You walk for twenty minutes and fall on a tent. You try to call someone, but nothing...
 You enter in it, there is a very old woman, she is asking for help, you approach her.
 She is asking you for her parrot...
