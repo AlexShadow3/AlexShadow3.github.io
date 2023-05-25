@@ -1,31 +1,33 @@
-var arrLang = {
-    "fr-fr": {
-        "HOME": "Accueil",
-        "ABOUT": "A Propos",
-        "CONTACT": "Me Contacter",
-        "MELIODAS": "Bienvenue sur mon site web personnel !",
-    },
-    "en-gb": {
+// Define a dictionary of translations for each language
+const translations = {
+    'en-gb': {
         "HOME": "Home",
-        "ABOUT": "About Us",
-        "CONTACT": "Contact Us",
+        "ABOUT": "About",
+        "CONTACT": "Contact",
         "MELIODAS": "Welcome on my personal website !",
+    },
+    'fr-fr': {
+        "HOME": "Accueil",
+        "ABOUT": "À propos",
+        "CONTACT": "Contact",
+        "MELIODAS": "Bienvenue sur mon site web personnel !",
     }
 };
 
-$(document).ready(function() {
-    // The default language is French
-    var lang = "fr-fr";
-    $(".lang").each(function(index, element) {
-        $(this).text(arrLang[lang][$(this).attr("key")]);
-    });
-});
+  // Get the language buttons and the elements with the lang class
+const langButtons = document.querySelectorAll('.translate');
+const langElements = document.querySelectorAll('.lang');
 
-  // get/set the selected language
-$(".translate").click(function() {
-    var lang = $(this).attr("id");
+  // Add click event listeners to the language buttons
+langButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Get the selected language from the button id
+        const lang = button.id;
 
-    $(".lang").each(function(index, element) {
-        $(this).text(arrLang[lang][$(this).attr("key")]);
+      // Update the text content of the elements with the lang class
+        langElements.forEach(element => {
+        const key = element.getAttribute('key');
+        element.textContent = translations[lang][key];
+        });
     });
 });
