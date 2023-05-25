@@ -140,17 +140,21 @@ footer {
     color: #d3d3d3;
 }
 
-.button {
+.translate {
     display: inline-block;
     background-color: #fff;
     color: #313131;
     padding: 0.8rem 2rem;
     border-radius: 2rem;
     transition: background-color 0.25s;
+    border-color: transparent;
+    font-size: 1rem;
     text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: bold;
 }
 
-.button:hover {
+.translate:hover {
     background-color: #d3d3d3;
 }
 
@@ -171,11 +175,11 @@ header.active .nav-link:hover {
     color: #808080;
 }
 
-header.active .button {
+header.active .translate {
     background-color: #313131;
     color: #fff;
 }
 
-header.active .button:hover {
+header.active .translate:hover {
     background-color: #151515;
 }
