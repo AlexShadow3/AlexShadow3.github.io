@@ -47,9 +47,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.Meliodas img {
+.Meliodas:not(:hover) img {
     border-radius: 50%;
     border: 1px solid red;
+    transform: scale(1.0);
+    transition-duration: 100ms;
+}
+.Meliodas:hover img {
+    border-radius: 50%;
+    border: 1px solid red;
+    transform: scale(1.1);
+    transition-duration: 100ms;
 }
 
 .Oralta {
@@ -59,9 +67,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.Oralta img {
+.Oralta:not(:hover) img {
     border-radius: 50%;
     border: 1px solid red;
+    transform: scale(1.0);
+    transition-duration: 100ms;
+}
+.Oralta:hover img {
+    border-radius: 50%;
+    border: 1px solid red;
+    transform: scale(1.1);
+    transition-duration: 100ms;
 }
 
 footer {
