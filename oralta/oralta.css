@@ -1,4 +1,4 @@
-/* BACKGROUND */
+/* WAVE BACKGROUND */
 
 body {
     margin: auto;
@@ -126,17 +126,22 @@ body {
     color: #d3d3d3;
 }
 
-.button {
+.translate {
     display: inline-block;
     background-color: #fff;
     color: #313131;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1rem;
     border-radius: 2rem;
     transition: background-color 0.25s;
+    border-color: transparent;
+    font-size: 1rem;
     text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: bold;
+    margin-left: 0.5rem;
 }
 
-.button:hover {
+.translate:hover {
     background-color: #d3d3d3;
 }
 
@@ -157,11 +162,31 @@ header.active .nav-link:hover {
     color: #808080;
 }
 
-header.active .button {
+header.active .translate {
     background-color: #313131;
     color: #fff;
 }
 
-header.active .button:hover {
+header.active .translate:hover {
     background-color: #151515;
+}
+
+/* DISCORD */
+
+.discord {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    z-index: 999;
+}
+
+/* YOUTUBE */
+
+.youtube {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
 }

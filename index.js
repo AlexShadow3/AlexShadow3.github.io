@@ -5,12 +5,14 @@ const translations = {
         "ABOUT": "About",
         "CONTACT": "Contact",
         "MELIODAS": "Welcome on my personal website !",
+        "ORALTA": "You can also discover my Oralta project by clicking on the image",
     },
     'fr-fr': {
         "HOME": "Accueil",
         "ABOUT": "À propos",
         "CONTACT": "Contact",
         "MELIODAS": "Bienvenue sur mon site web personnel !",
+        "ORALTA": "Vous pouvez aussi découvrir mon projet Oralta en cliquant sur l'image",
     }
 };
 
