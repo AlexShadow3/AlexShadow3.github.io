@@ -1,0 +1,214 @@
+/* html {
+    background-color: rgb(109, 35, 35);
+    background-image:url(../images/Background.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+} */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main .box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 20px;
+    color: #1e7fb0;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.main .box hr {
+    border-top: 2px solid #a2a2a2;
+    margin: 3px;
+}
+
+.main .box input {
+    width: 100%;
+    margin-bottom: 3px;
+    height: 50px;
+    padding: 3px;
+    resize: vertical;
+}
+
+.main .box .qrcode {
+    padding: 3px;
+}
+
+.main .box .sqrcode {  
+    padding: 3px;
+    margin-left: 15px;
+}
+
+.main .box button {
+    width: 100%;
+    height: 35px;
+    background-color: #1e7fb0;
+    font-weight: 700;
+    font-family: 'Unbutu', sans-serif;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    color: whitesmoke;
+}
+
+/* NAVBAR */
+
+.primary-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+.container {
+    max-width: 120rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.navbar {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    transition: height 0.25s;
+}
+
+.logo {
+    transition: color .25s;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #151515;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #d3d3d3;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin-left: 5rem;
+    margin-right: auto;
+}
+
+.nav-link {
+    transition: color .25s;
+    text-decoration: none;
+    color: #151515;
+}
+
+.nav-link:hover {
+    color: #d3d3d3;
+}
+
+.translate {
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    transition: background-color 0.25s;
+    border-color: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: bold;
+}
+
+.translate:hover {
+    background-color: #d3d3d3;
+}
+
+header.active {
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+
+header.active .navbar {
+    height: 6rem;
+}
+
+header.active .logo, header.active .nav-link {
+    color: #313131;
+}
+
+header.active .nav-link:hover {
+    color: #808080;
+}
+
+header.active .translate {
+    background-color: #313131;
+    color: #fff;
+}
+
+header.active .translate:hover {
+    background-color: #151515;
+}
+
+/* QR Code */
+
+.app-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.app-title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input-label {
+    font-size: 16px;
+    color: #555;
+    width: 80px;
+}
+
+.input-field {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.gr-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
