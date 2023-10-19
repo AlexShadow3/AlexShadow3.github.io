@@ -7,10 +7,10 @@
     <title>QR Codes</title>
     <link href="../images/alexshadow91_qr.png" rel="icon"/>
     <link href="qrcode.css" rel="stylesheet">
-    <script src="qrcode.js" type="module" defer></script>
     <script src="../index.js" type="module" defer></script>
 </head>
 <body>
+    <div class="content-container">
     <header class="primary-header">
         <nav class="navbar container">
             <a href="qrcode.html" class="logo">QR Codes</a>
@@ -32,10 +32,33 @@
             <button class="translate" id="en-gb">English</button>
         </nav>
     </header>
-    
+    <section class="qr_code_gene">
+        <label>Entrez un texte ou un lien.</label>
+        <input type="text" class="qr_texte" placeholder="https://alexshadow.github.io" onchange="generateur()">
+        <div class="qr_code"></div>
+    </section>
     <footer>
         <p>© 2023 AlexShadow3</p>
     </footer>
+    </div>
+
+    <!-- JavaScript Code-->
+    <script src="qrcode.min.js"></script>
+    <script type="text/javascript">
+        var qr_texte = document.querySelector(".qr_texte");
+
+        function generateur() {
+            var qrcode = document.querySelector(".qr_code");
+            qrcode.style.display = "flex";
+            qrcode.innerHTML = "";
+            new QRCode(qrcode, qr_texte.value);
+            qr_texte.value = "";
+
+            var footer = document.querySelector("footer");
+            footer.style.marginTop = qrcode.clientHeight + "px";
+        }
+
+    </script>
 </body>
 </html>
 <!-- http://alexshadow3.github.io/-->
