@@ -1,6 +1,6 @@
 #theme: dark
 #author: Alexandre BOBIS
-# IMAGE: ../images/island.png
+#IMAGE: ../images/island.png
 
 VAR food = 0
 VAR newfood = 0
@@ -16,7 +16,8 @@ VAR waterPiecePuzzle = 0
 VAR cavePiecePuzzle = 0
 VAR explorationPiecePuzzle = 0
 VAR monkeyPiecePuzzle = 0
-
+VAR days = 1
+VAR daysLeft = 5
 
 PACIFIC OCEAN, 2020
 Foreover Island
@@ -37,7 +38,7 @@ You have a first choice to do... -> camping
 
 * [Camping on the beach] -> beach
 # IMAGE: ../images/beach.png
-* [Camping in the forest]-> forest
+* [Camping in the forest] -> forest
 # IMAGE: ../images/forest.png
 
 === forest ===
@@ -46,7 +47,7 @@ It's not a sure place... -> camping
 
 === beach ===
 
-It seems to be the greatest idea now. But you will need to build a little house, fish, cook, bake... The task will not be easy...
+It seems to be the greatest idea now. But you will need to build a little house, fish, cook, explore... The task will not be easy...
 
 Now that we have our camp, we can decide...
 
@@ -57,9 +58,9 @@ Now that we have our camp, we can decide...
 
 === cut0 ===
 
-You go to the forest to cut wood but... you have nothing to cut...
+You want go to the forestbut ... you are hungry...
 
-+ [Fish] ->fish0
++ [Fish] -> fish0
 
 === fish0 ===
 
@@ -72,11 +73,11 @@ You have to catch it.
 + [Catch]
 ~food += RANDOM(1, 3)
 Well done, you caught it. Your current food supply is {food}.
-->setup0
+-> setup0
 
 === setup0 ===
 
-We have food now... but we need to do a firecamp. Let's catch stickwood.
+We have food now... but we need to do a firecamp. Let's catch stickwoods.
 # IMAGE: ../images/firecamp.png
 
 + [Catch]
@@ -86,12 +87,13 @@ You found {newwood} stickwood.
 You have now {wood} stickwood
 ~newwood = 0
 
-->checkwood
+-> checkwood
 
 === checkwood ===
 
 {wood<3:
-  You realize you don't have enough stickwood to build a fire camp. You need to go back and find more.-> setup0
+  You realize you don't have enough stickwood to build a fire camp. You need to go back and find more.
+  -> setup0
 - else:
   You have enough stickwood to build a fire camp.
   -> firecamp
@@ -101,17 +103,18 @@ You have now {wood} stickwood
 
 You prepare the wood by taking three stickwood
 ~wood -= 3
-Now, you take two rocks in your hands and you rub them together ->rub
+Now, you take two rocks in your hands and you rub them together
+-> rub
 
 === rub ===
 
 # IMAGE: ../images/rub.png
-+[Rub] *Rubs*
++ [Rub] *Rubs*
 ~random += RANDOM(1, 10)
 {random<7:
     You need to rub again...
     ~random = 0
-    ->rub
+    -> rub
 - else:
     You started the firecamp
     ~random = 0
@@ -123,7 +126,19 @@ But the sun sets... it's the time to stay around the firecamp if you don't want 
 Let's eat a crab you have caught and then sleep.
 ~food -= 1
 
-It's the end of the first day... 
+It's the end of the day...
+
+{daysLeft==0 && (food==0||water==0):
+    But you don't have enough to live...
+    -> notEnoughToLive
+- else:
+    {daysLeft>=0 && (food==0||water==0):
+        ~daysLeft-=1
+    - else:
+        And you still there...
+    }
+}
+
 -> dream
 
 === dream ===
@@ -135,17 +150,19 @@ You're waking up, strongly breathing. You know where you are, you are looking ar
 
 === next ===
 
+~days += 1
+
 You have {food} {food > 1:supplies|supply} of food, {wood} {wood > 1:supplies|supply} of stickwood and {water} {water > 1:supplies|supply} of water. What do you want to do ?
 
 + [Fish] -> fish
-+ [Catch wood] -> forest1
++ [Catch stickwoods] -> forest1
 + [Catch rocks] -> stone
 Let's explore...
 + {explorationPiecePuzzle < 1} [Explore] -> explore0
-* {explorationPiecePuzzle > 0}[Explore] -> explore1
+* {explorationPiecePuzzle > 0} [Explore] -> explore1
 I should try this water filter
-+ {explorationPiecePuzzle > 0}[Filter water] -> filterwater
-+ {explorationPiecePuzzle > 0}[Drink] -> drink
++ {explorationPiecePuzzle > 0} [Filter water] -> filterwater
++ {explorationPiecePuzzle > 0} [Drink] -> drink
 + [Eat] -> eat
 + [Sleep] -> sleep
 
@@ -153,12 +170,12 @@ I should try this water filter
 
 You go to sleep...
 But first, you need to rub the rocks
-+[Rub] *Rubs*
++ [Rub] *Rubs*
 ~random += RANDOM(1, 10)
 {random<7:
     You need to rub again...
     ~random = 0
-    ->rub
+    -> rub
 - else:
     You started the firecamp
     ~random = 0
@@ -181,7 +198,8 @@ You have now {water} supplies of water
 === drink ===
 
 {water<3:
-  You realize you don't have enough water to drink. You need to have water.-> next
+  You realize you don't have enough water to drink. You need to have water.
+  -> next
 - else:
   You drink
   ~water -= 3
@@ -191,7 +209,8 @@ You have now {water} supplies of water
 === eat ===
 
 {food<3:
-  You realize you don't have enough food to eat. You need to fish.-> next
+  You realize you don't have enough food to eat. You need to fish.
+  -> next
 - else:
   You eat
   ~food -= 3
@@ -232,7 +251,7 @@ You notice that they speak the same language as you. Perhaps they have already k
 A monkey offers you to exchange, here is the list of possible exchanges:
 5 fishes against 3 stickwood
 5 rocks against 3 stickwood
-5 of wood against 6 of water
+5 stickwoods against 6 of water
 100 stickwood against a mystery object
 -> exchange
 
@@ -242,16 +261,17 @@ A monkey offers you to exchange, here is the list of possible exchanges:
 + [5 rocks against 3 stickwood] -> rockexchange
 + [10 of wood against 6 of water] -> waterexchange
 + {monkeyPiecePuzzle < 1}[100 stickwood against a mystery object] -> mysteryobject
-* {monkeyPiecePuzzle > 0} [Piece already bought] ->exchange
-+ [Catch wood] ->catchwood
+* {monkeyPiecePuzzle > 0} [Piece already bought] -> exchange
++ [Catch wood] -> catchwood
 + [Return to the beach] -> next
 
 === fishexchange ===
 
 {food>5:
-   You realize you don't have enough fishes to exchange. You need to fish.-> exchange
+   You realize you don't have enough fishes to exchange. You need to fish.
+   -> exchange
 - else:
-   You gave it 5 fishes. It gave you 3 stickwood
+   You gave it 5 fishes. It gave you 3 stickwoods
    ~food -= 5
    ~wood += 3
    -> exchange
@@ -260,9 +280,10 @@ A monkey offers you to exchange, here is the list of possible exchanges:
 === rockexchange ===
 
 {rock>5:
-   You realize you don't have enough rocks to exchange. You need to catch rocks.-> exchange
+   You realize you don't have enough rocks to exchange. You need to catch rocks.
+   -> exchange
 - else:
-   You gave it 5 rocks. It gave you 3 stickwood
+   You gave it 5 rocks. It gave you 3 stickwoods
    ~rock -= 5
    ~wood += 3
    -> exchange
@@ -271,7 +292,8 @@ A monkey offers you to exchange, here is the list of possible exchanges:
 === waterexchange ===
 
 {wood>10:
-   You realize you don't have enough wood to exchange. You need to cut wood or exchange it.-> exchange
+   You realize you don't have enough wood to exchange. You need to catch stickwoods or exchange it.
+   -> exchange
 - else:
    You gave it 10 wood. It gave you 6 of water.
    ~wood -= 10
@@ -293,10 +315,13 @@ You return to the beach.
 
 # IMAGE: ../images/mystery.png
 {wood>100:
-   You realize you don't have enough wood to exchange. You need to cut wood.-> exchange
+   You realize you don't have enough wood to exchange. You need to catch stickwoods.
+   -> exchange
 - else:
    You gave it 100 supplies of wood. It gave you the mystery object, it's a piece, like a piece of a circle puzzle.
    ~wood -= 100
+   puzzlePieces += 1
+   monkeyPiecePuzzle += 1
    -> isthepuzzlecomplete
 }
 
@@ -323,7 +348,7 @@ They are a lot of rocks on this lagoon.
 === cave ===
 
 # IMAGE: ../images/cave.png
-You are now in the cave. Something seems to light up the cave, you continue to advance and fall on a small room. In this room, there is... a piece, like a piece of a circle puzzle.
+You are now in the cave. Something seems to light up the cave, you continue to advance and fall on a small room. In this room, there is... box... and a piece in it, like a piece of a circle puzzle.
 You take the piece and remember the film when Indiana Jones took the golden statuette...
 You ear a loud noise, it seems that the cave is going to collapse.
 You run, until the sunlight.
@@ -406,8 +431,20 @@ And... nothing more
 Just the dark... again and again...
 Then you fall asleep...
 
+-> theRealEnd
+
+=== notEnoughToLive ===
+
+You don't have enough supplies to live so...
+
+-> theRealEnd
+
+=== theRealEnd ===
+
 You are dreaming, dreaming of your wife and your two children. They are on a beach and you are taking a picture of them. But...
 
 You're waking up, strongly breathing. You don't know where you are, you are looking around you but nothing, only a beach with sand, and a silent forest behind you...
+
+You survived {days} days
 
 -> END

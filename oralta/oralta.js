@@ -4,3 +4,4 @@ const isScrolling = () => {
     headerEl.classList.toggle('active', windowPosition)
 }
 window.addEventListener('scroll', isScrolling)
+
