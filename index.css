@@ -9,7 +9,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-#oralta {
+/* #oralta {
     color: white;
     background-color: rgb(97, 32, 32);
     padding: 1%;
@@ -20,6 +20,11 @@ body {
     margin-top: 1%;
 }
 
+#oralta:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(150, 150, 150);
+} */
+
 #alexandrebobis {
     color: white;
     background-color: rgb(97, 32, 32);
@@ -28,11 +33,6 @@ body {
     border-radius: 10px;
     border: 1px solid red;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#oralta:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(150, 150, 150);
 }
 
 #alexandrebobis:hover {
@@ -60,7 +60,7 @@ body {
     transition-duration: 100ms;
 }
 
-.Oralta {
+/* .Oralta {
     margin-top: 10%;
     text-align: center;
     color: whitesmoke;
@@ -78,7 +78,7 @@ body {
     border: 1px solid red;
     transform: scale(1.1);
     transition-duration: 100ms;
-}
+} */
 
 footer {
     color: whitesmoke;
