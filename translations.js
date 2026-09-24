@@ -1,12 +1,112 @@
 export const translations = {
     'en-gb': {
-        "NAV_MY_GAME": "My game",
+        // Navigation
+        "NAV_PORTFOLIO": "Portfolio",
+        "NAV_MY_GAME": "Portfolio",
+        "NAV_CODEX": "CodeX Syndicate",
+        "NAV_PROJECTS": "Projects",
+        "NAV_SKILLS": "Skills",
         "NAV_QR_CODES": "QR Codes",
         "NAV_HEIST_TOS": "Heist Bot TOS",
         "NAV_HEIST_PRIVACY": "Heist Bot Privacy",
         
-        "MELIODAS": "Welcome on my personal website !",
+        "MELIODAS": "Welcome to my personal website & portfolio!",
+
+        // Hero Section
+        "HERO_BADGE": "Full-Stack Developer & Game Creator",
+        "HERO_TITLE": "Alexandre Bobis",
+        "HERO_SUBTITLE": "Software developer, Discord bot architect, and active member of the <strong>CodeX Syndicate</strong> collective. Designing immersive web games, resilient bots, and modern digital tools.",
+        "HERO_BTN_PROJECTS": "Explore Projects",
+        "HERO_BTN_CODEX": "CodeX Syndicate",
+        "HERO_BTN_GITHUB": "GitHub Profile",
+
+        // Quick Stats
+        "STAT_REPOS_NUM": "18+",
+        "STAT_REPOS_LABEL": "Public Repositories",
+        "STAT_BOTS_NUM": "3",
+        "STAT_BOTS_LABEL": "Discord Game Bots",
+        "STAT_GAMES_NUM": "4+",
+        "STAT_GAMES_LABEL": "Games & Web Apps",
+        "STAT_ORGS_NUM": "2",
+        "STAT_ORGS_LABEL": "Syndicates & Teams",
+
+        // CodeX Syndicate Section
+        "CODEX_BADGE": "Official Organization",
+        "CODEX_TITLE": "CodeX Syndicate",
+        "CODEX_TAGLINE": "Independent collective of French developers crafting interactive experiences",
+        "CODEX_DESC": "CodeX Syndicate brings together passionate creators focused on building interactive web games, desktop software, and audio systems. From digital board games deployed live to multi-device Bluetooth audio architectures, we turn ambitious ideas into open-source reality.",
+        "CODEX_BTN_ORG": "Visit CodeX Syndicate on GitHub",
+        "CODEX_CARD_GAMES_DESC": "Interactive browser card game platform deployed live on Vercel.",
+        "CODEX_ORLOG_DESC": "Digital adaptation of the Viking dice and god-favors strategy game inspired by Assassin's Creed Valhalla.",
+        "CODEX_AEROHEAR_DESC": "Multi Bluetooth Audio Player in C# enabling concurrent audio streams.",
+        "CODEX_MAXPOWER_DESC": "High-performance utility and gaming experiment developed in C#.",
+        "CODEX_HEXGAME_DESC": "Strategic hexagonal grid game developed in pure JavaScript.",
+        "CODEX_COLORPICKER_DESC": "Modern color tool for palette design and real-time code conversion.",
+
+        // Projects Section
+        "PROJECTS_SECTION_TITLE": "Featured Projects",
+        "PROJECTS_SECTION_SUB": "A curated showcase of personal productions and CodeX Syndicate flagship projects.",
         
+        // Filter tabs
+        "FILTER_ALL": "All Projects",
+        "FILTER_CODEX": "CodeX Syndicate",
+        "FILTER_PERSONAL": "AlexShadow3",
+        "FILTER_BOTS": "Discord Bots",
+        "FILTER_GAMES": "Games",
+        "FILTER_TOOLS": "Web & Tools",
+
+        // Project details
+        "PROJ_HEIST_TITLE": "Heist Bot",
+        "PROJ_HEIST_DESC": "Feature-rich Discord RPG bot: virtual heists, dynamic fictional economy, user inventory, robbery mechanics, and bank safe protection.",
+        
+        "PROJ_BATTLESHIP_TITLE": "Battleship Bot",
+        "PROJ_BATTLESHIP_DESC": "Turn-based tactical Battleship game played directly in Discord text channels with interactive board rendering.",
+
+        "PROJ_QR_TITLE": "QR Code Generator",
+        "PROJ_QR_DESC": "Fast, privacy-friendly QR code generator with live preview, clipboard copying, and high-definition PNG export.",
+
+        "PROJ_SOGALEN_TITLE": "Sogalen",
+        "PROJ_SOGALEN_DESC": "Versatile community Discord bot written in modern JavaScript featuring server moderation and mini-games.",
+
+        "PROJ_TKD_TITLE": "TaeKwonDo API & Plugin",
+        "PROJ_TKD_DESC": "The most comprehensive French TaeKwonDo API, documenting official techniques, poomsaes, stances, and martial glossary.",
+
+        "PROJ_SCOOBY_TITLE": "Scooby-Doo: MANS",
+        "PROJ_SCOOBY_DESC": "Mysteries Are Never Solved: an interactive mystery exploration game built with storytelling mechanics.",
+
+        "PROJ_CARD_GAMES_TITLE": "Card Games",
+        "PROJ_ORLOG_TITLE": "Orlog",
+        "PROJ_AEROHEAR_TITLE": "AeroHear",
+        "PROJ_MAXPOWER_TITLE": "Max-Power",
+        "PROJ_HEXGAME_TITLE": "HexGame",
+        "PROJ_COLORPICKER_TITLE": "Color Picker",
+
+        // Project Card Buttons / Badges
+        "BTN_LIVE_DEMO": "Live Demo",
+        "BTN_GITHUB": "Repository",
+        "BTN_MORE_INFO": "More Details",
+        "BADGE_CODEX": "CodeX Syndicate",
+        "BADGE_PERSONAL": "AlexShadow3",
+        "BADGE_LIVE": "Live App",
+
+        // Skills Section
+        "SKILLS_TITLE": "Skills & Technologies",
+        "SKILLS_SUB": "Technologies, frameworks, and environments used across projects.",
+        "SKILL_CAT_LANG": "Languages",
+        "SKILL_CAT_FRAMEWORKS": "Ecosystem & Frameworks",
+        "SKILL_CAT_DOMAINS": "Core Domains",
+        "SKILL_CAT_TOOLS": "Dev Tools & Platforms",
+
+        // Contact Section
+        "CONTACT_TITLE": "Let's Connect",
+        "CONTACT_SUB": "Interested in collaborating or discussing projects? Find me across the web.",
+        "CONTACT_GITHUB_TEXT": "Browse open source repositories & contributions",
+        "CONTACT_CODEX_TEXT": "Discover collaborative games and utilities with CodeX Syndicate",
+
+        // Footer
+        "FOOTER_TEXT": "© 2026 Alexandre Bobis (AlexShadow3). Crafted with passion and CodeX Syndicate synergy.",
+
+        // Legacy / Other Pages
         "QR_TITLE": "QR Generator",
         "QR_SUBTITLE": "Instantly create a QR code from any text or link.",
         "QR_BTN_COPY": "Copy",
@@ -65,13 +165,113 @@ export const translations = {
         "PRIV_P6": "This Privacy Policy may be updated. We encourage you to review it regularly. Continued use of the bot after a modification constitutes acceptance of the new policy."
     },
     'fr-fr': {
-        "NAV_MY_GAME": "Mon jeu",
+        // Navigation
+        "NAV_PORTFOLIO": "Portfolio",
+        "NAV_MY_GAME": "Portfolio",
+        "NAV_CODEX": "CodeX Syndicate",
+        "NAV_PROJECTS": "Projets",
+        "NAV_SKILLS": "Compétences",
         "NAV_QR_CODES": "QR Codes",
         "NAV_HEIST_TOS": "Heist Bot CGU",
         "NAV_HEIST_PRIVACY": "Heist Bot Confidentialité",
         
-        "MELIODAS": "Bienvenue sur mon site web personnel !",
+        "MELIODAS": "Bienvenue sur mon site web personnel & portfolio !",
+
+        // Hero Section
+        "HERO_BADGE": "Développeur Full-Stack & Créateur de Jeux",
+        "HERO_TITLE": "Alexandre Bobis",
+        "HERO_SUBTITLE": "Développeur logiciel, architecte de bots Discord et membre actif du collectif <strong>CodeX Syndicate</strong>. Passionné par la création de jeux web immersifs, de bots robustes et d'outils numériques modernes.",
+        "HERO_BTN_PROJECTS": "Découvrir les projets",
+        "HERO_BTN_CODEX": "CodeX Syndicate",
+        "HERO_BTN_GITHUB": "Profil GitHub",
+
+        // Quick Stats
+        "STAT_REPOS_NUM": "18+",
+        "STAT_REPOS_LABEL": "Dépôts Publics",
+        "STAT_BOTS_NUM": "3",
+        "STAT_BOTS_LABEL": "Bots Discord de Jeu",
+        "STAT_GAMES_NUM": "4+",
+        "STAT_GAMES_LABEL": "Jeux & Apps Web",
+        "STAT_ORGS_NUM": "2",
+        "STAT_ORGS_LABEL": "Collectifs & Équipes",
+
+        // CodeX Syndicate Section
+        "CODEX_BADGE": "Organisation Officielle",
+        "CODEX_TITLE": "CodeX Syndicate",
+        "CODEX_TAGLINE": "Collectif indépendant de développeurs français créateurs d'expériences interactives",
+        "CODEX_DESC": "CodeX Syndicate regroupe des passionnés autour de projets interactifs et logiciels : jeux de société numériques déployés en ligne, architectures audio multi-sources Bluetooth en C#, et utilitaires innovants. Nous transformons les idées créatives en applications concrètes.",
+        "CODEX_BTN_ORG": "Visiter CodeX Syndicate sur GitHub",
+        "CODEX_CARD_GAMES_DESC": "Plateforme web de jeux de cartes interactifs déployée en ligne sur Vercel.",
+        "CODEX_ORLOG_DESC": "Adaptation numérique du célèbre jeu de dés viking et de faveurs divines inspiré d'Assassin's Creed Valhalla.",
+        "CODEX_AEROHEAR_DESC": "Lecteur audio Bluetooth multi-périphériques développé en C# pour un contrôle simultané.",
+        "CODEX_MAXPOWER_DESC": "Projet utilitaire et interactif haute performance développé en C#.",
+        "CODEX_HEXGAME_DESC": "Jeu de réflexion et de stratégie sur grille hexagonale en pur JavaScript.",
+        "CODEX_COLORPICKER_DESC": "Outil web moderne d'exploration de palettes et de conversion de couleurs.",
+
+        // Projects Section
+        "PROJECTS_SECTION_TITLE": "Projets & Réalisations",
+        "PROJECTS_SECTION_SUB": "Une vitrine complète de mes créations personnelles et des projets phares de CodeX Syndicate.",
         
+        // Filter tabs
+        "FILTER_ALL": "Tous les projets",
+        "FILTER_CODEX": "CodeX Syndicate",
+        "FILTER_PERSONAL": "AlexShadow3",
+        "FILTER_BOTS": "Bots Discord",
+        "FILTER_GAMES": "Jeux Vidéo",
+        "FILTER_TOOLS": "Web & Outils",
+
+        // Project details
+        "PROJ_HEIST_TITLE": "Heist Bot",
+        "PROJ_HEIST_DESC": "Bot Discord RPG complet : braquages virtuels, économie fictive équilibrée, inventaire d'objets, vols entre joueurs et coffres-forts sécurisés.",
+        
+        "PROJ_BATTLESHIP_TITLE": "Battleship Bot",
+        "PROJ_BATTLESHIP_DESC": "Jeu de Bataille Navale tactique au tour par tour directement intégré dans vos salons de discussion Discord.",
+
+        "PROJ_QR_TITLE": "Générateur QR Codes",
+        "PROJ_QR_DESC": "Générateur de QR codes instantané et respectueux de la vie privée avec prévisualisation en direct, copie presse-papier et téléchargement HD.",
+
+        "PROJ_SOGALEN_TITLE": "Sogalen",
+        "PROJ_SOGALEN_DESC": "Bot Discord multifonctions en JavaScript moderne dédié à l'animation de communauté, à la modération et aux mini-jeux.",
+
+        "PROJ_TKD_TITLE": "TaeKwonDo API & Plugin",
+        "PROJ_TKD_DESC": "L'API française de référence sur le TaeKwonDo, recensant techniques officielles, poumsés, positions et lexique martial complet.",
+
+        "PROJ_SCOOBY_TITLE": "Scooby-Doo: MANS",
+        "PROJ_SCOOBY_DESC": "Mysteries Are Never Solved : projet de jeu narratif d'aventure et de résolution d'énigmes développé en équipe.",
+
+        "PROJ_CARD_GAMES_TITLE": "Card Games",
+        "PROJ_ORLOG_TITLE": "Orlog",
+        "PROJ_AEROHEAR_TITLE": "AeroHear",
+        "PROJ_MAXPOWER_TITLE": "Max-Power",
+        "PROJ_HEXGAME_TITLE": "HexGame",
+        "PROJ_COLORPICKER_TITLE": "Color Picker",
+
+        // Project Card Buttons / Badges
+        "BTN_LIVE_DEMO": "Démo en direct",
+        "BTN_GITHUB": "Dépôt GitHub",
+        "BTN_MORE_INFO": "Détails",
+        "BADGE_CODEX": "CodeX Syndicate",
+        "BADGE_PERSONAL": "AlexShadow3",
+        "BADGE_LIVE": "En ligne",
+
+        // Skills Section
+        "SKILLS_TITLE": "Compétences & Technologies",
+        "SKILLS_SUB": "Langages, frameworks et outils mobilisés au quotidien.",
+        "SKILL_CAT_LANG": "Langages de programmation",
+        "SKILL_CAT_FRAMEWORKS": "Écosystème & Frameworks",
+        "SKILL_CAT_DOMAINS": "Domaines d'expertise",
+        "SKILL_CAT_TOOLS": "Outils & Plateformes",
+
+        // Contact Section
+        "CONTACT_TITLE": "Restons en contact",
+        "CONTACT_SUB": "Envie d'échanger sur un projet ou de collaborer ? Retrouvez-moi sur les différentes plateformes.",
+        "CONTACT_GITHUB_TEXT": "Explorer mes dépôts open source et contributions",
+        "CONTACT_CODEX_TEXT": "Découvrir les projets collectifs et jeux CodeX Syndicate",
+
+        // Footer
+        "FOOTER_TEXT": "© 2026 Alexandre Bobis (AlexShadow3). Conçu avec passion & propulsé par CodeX Syndicate.",
+
+        // Legacy / Other Pages
         "QR_TITLE": "Générateur QR",
         "QR_SUBTITLE": "Créez instantanément un code QR à partir de n'importe quel texte ou lien.",
         "QR_BTN_COPY": "Copier",

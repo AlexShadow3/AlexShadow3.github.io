@@ -1,50 +1,922 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlexShadow3</title>
-    <link href="../images/Meliodas.png" rel="icon"/>
+    <title>AlexShadow3 · Portfolio & CodeX Syndicate</title>
+    <meta name="description"
+        content="Portfolio d'Alexandre Bobis (AlexShadow3) - Développeur Full-Stack et créateur de jeux web. Membre du collectif CodeX Syndicate.">
+    <link href="images/Meliodas.png" rel="icon" type="image/png" />
     <link href="index.css" rel="stylesheet">
     <script src="index.js" type="module" defer></script>
 </head>
+
 <body>
+    <!-- Navigation Header -->
     <header class="primary-header">
         <nav class="navbar container">
-            <a href="index.html" class="logo">ALEXSHADOW3</a>
-            <ul class="nav-list">
-                <!-- <li>
-                    <a href="/oralta/oralta.html" class="nav-link">ORALTA</a>
-                </li> -->
-                <li>
-                    <a href="/my_game/You are the last of them/index.html" class="nav-link lang" key="NAV_MY_GAME">Mon jeu</a>
-                </li>
-                <li>
-                    <a href="/qrcode/qrcode.html" class="nav-link lang" key="NAV_QR_CODES">QR Codes</a>
-                </li>
-                <li>
-                    <a href="/heist-bot/conditions.html" class="nav-link lang" key="NAV_HEIST_TOS">Heist Bot CGU</a>
-                </li>
-                <li>
-                    <a href="/heist-bot/confidentialite.html" class="nav-link lang" key="NAV_HEIST_PRIVACY">Heist Bot Confidentialité</a>
-                </li>
-            </ul>
-            <button class="translate" id="fr-fr">Français</button>
-            <button class="translate" id="en-gb">English</button>
+            <a href="index.html" class="logo">
+                <span class="logo-dot"></span>
+                <span>ALEXSHADOW3</span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#portfolio" class="nav-link active lang" key="NAV_PORTFOLIO">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#codex" class="nav-link lang" key="NAV_CODEX">CodeX Syndicate</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav-link lang" key="NAV_PROJECTS">Projets</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="nav-link lang" key="NAV_SKILLS">Compétences</a>
+                    </li>
+                    <li>
+                        <a href="/qrcode/qrcode.html" class="nav-link lang" key="NAV_QR_CODES">QR Codes</a>
+                    </li>
+                    <li>
+                        <a href="/heist-bot/conditions.html" class="nav-link lang" key="NAV_HEIST_TOS">Heist Bot CGU</a>
+                    </li>
+                    <li>
+                        <a href="/heist-bot/confidentialite.html" class="nav-link lang" key="NAV_HEIST_PRIVACY">Heist
+                            Bot Confidentialité</a>
+                    </li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="translate-buttons">
+                        <button class="translate" id="fr-fr">Français</button>
+                        <button class="translate" id="en-gb">English</button>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
-    <section class="Meliodas">
-        <img src="../images/Meliodas.png" alt="Meliodas" width="10%" height="10%">
-        <p class="lang" key="MELIODAS">Bienvenue sur mon site web personnel !</p>
-    </section>
-    <!-- <section class="Oralta">
-        <a href="oralta/oralta.html"><img src="../images/Oralta.png" alt="Oralta" width="10%" height="10%"></a>
-        <p class="lang" key="ORALTA">Vous pouvez aussi découvrir mon projet Oralta en cliquant sur l'image</p>
-    </section> -->
+
+    <main id="portfolio">
+        <!-- Hero Section -->
+        <section class="hero-section container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        <span class="lang" key="HERO_BADGE">Développeur Full-Stack & Créateur de Jeux</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="lang" key="HERO_TITLE">Alexandre Bobis</span><br>
+                        <span class="gradient-text">AlexShadow3</span>
+                    </h1>
+
+                    <div class="hero-role lang" key="HERO_ROLE">
+                        Développeur Logiciel
+                    </div>
+
+                    <p class="hero-desc lang" key="HERO_DESC">
+                        Développeur logiciel et membre actif du collectif <strong>CodeX Syndicate</strong>. Passionné
+                        par la création d'applications, de jeux web immersifs, et d'outils numériques modernes.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            <span class="lang" key="HERO_BTN_PROJECTS">Découvrir les projets</span>
+                        </a>
+
+                        <a href="#codex" class="btn btn-codex">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="12 8 8 12 12 16 16 12 12 8"></polygon>
+                            </svg>
+                            <span class="lang" key="HERO_BTN_CODEX">CodeX Syndicate</span>
+                        </a>
+
+                        <a href="https://github.com/AlexShadow3" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="HERO_BTN_GITHUB">Profil GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Glass Card -->
+                <div class="hero-card-wrapper">
+                    <div class="hero-profile-card">
+                        <div class="profile-card-header">
+                            <div class="avatar-wrapper">
+                                <img src="images/Meliodas.png" alt="AlexShadow3 Avatar" class="profile-avatar">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="profile-meta">
+                                <h3>Alexandre Bobis</h3>
+                                <div class="profile-handle">@AlexShadow3</div>
+                                <div class="profile-location">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span>Paris, France</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <span class="terminal-circle circle-red"></span>
+                                <span class="terminal-circle circle-yellow"></span>
+                                <span class="terminal-circle circle-green"></span>
+                                <span class="terminal-title">alexshadow3.config.js</span>
+                            </div>
+                            <div class="terminal-body">
+                                <code>
+                                    <span class="code-keyword">const</span> developer = {<br>
+                                    &nbsp;&nbsp;<span class="code-prop">name</span>: <span class="code-str">"Alexandre Bobis"</span>,<br>
+                                    &nbsp;&nbsp;<span class="code-prop">alias</span>: <span class="code-str">"AlexShadow3"</span>,<br>
+                                    &nbsp;&nbsp;<span class="code-prop">organization</span>: <span class="code-str">"@CodeX-Syndicate"</span>,<br>
+                                    &nbsp;&nbsp;<span class="code-prop">focus</span>: [<span class="code-arr">"Applications"</span>, <span class="code-arr">"Web Games"</span>, <span class="code-arr">"C#"</span>],<br>
+                                    &nbsp;&nbsp;<span class="code-prop">motto</span>: <span class="code-str">"Building resilient interactive apps"</span><br>
+                                    };
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num lang" key="STAT_REPOS_NUM">18+</div>
+                    <div class="stat-label lang" key="STAT_REPOS_LABEL">Dépôts Publics</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num lang" key="STAT_GAMES_NUM">4+</div>
+                    <div class="stat-label lang" key="STAT_GAMES_LABEL">Jeux & Apps Web</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num lang" key="STAT_BOTS_NUM">3</div>
+                    <div class="stat-label lang" key="STAT_BOTS_LABEL">Bots Discord de Jeu</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num lang" key="STAT_ORGS_NUM">2</div>
+                    <div class="stat-label lang" key="STAT_ORGS_LABEL">Collectifs & Équipes</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CodeX Syndicate Showcase Section -->
+        <section id="codex" class="codex-section container">
+            <div class="codex-banner">
+                <div class="codex-header">
+                    <div class="codex-brand">
+                        <img src="https://avatars.githubusercontent.com/u/200921904?v=4" alt="CodeX Syndicate Logo"
+                            class="codex-avatar" onerror="this.src='images/Meliodas.png'">
+                        <div>
+                            <div class="codex-info-badge">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L1 21h22L12 2zm0 4.5l7.5 13H4.5L12 6.5z" />
+                                </svg>
+                                <span class="lang" key="CODEX_BADGE">Organisation Officielle</span>
+                            </div>
+                            <h2 class="codex-title lang" key="CODEX_TITLE">CodeX Syndicate</h2>
+                            <p class="codex-tagline lang" key="CODEX_TAGLINE">Collectif indépendant de développeurs
+                                français créateurs d'expériences interactives</p>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/CodeX-Syndicate" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-codex">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        <span class="lang" key="CODEX_BTN_ORG">Visiter CodeX Syndicate sur GitHub</span>
+                    </a>
+                </div>
+
+                <p class="codex-desc lang" key="CODEX_DESC">
+                    CodeX Syndicate regroupe des passionnés autour de projets interactifs et logiciels : jeux de société
+                    numériques déployés en ligne, architectures audio multi-sources Bluetooth en C#, et utilitaires
+                    innovants. Nous transformons les idées créatives en applications concrètes.
+                </p>
+
+                <!-- Flagship CodeX Projects Deployed Live -->
+                <div class="codex-flagships">
+                    <div class="flagship-card">
+                        <div class="flagship-top">
+                            <div class="flagship-meta">
+                                <span class="live-badge">
+                                    <span class="pulse-dot"></span>
+                                    <span class="lang" key="BADGE_LIVE">En ligne</span>
+                                </span>
+                                <span class="org-badge codex">CodeX Syndicate</span>
+                            </div>
+                            <h3 class="flagship-title">Card Games</h3>
+                            <p class="flagship-desc lang" key="CODEX_CARD_GAMES_DESC">
+                                Plateforme web de jeux de cartes interactifs déployée en ligne sur Vercel.
+                            </p>
+                        </div>
+                        <div class="flagship-actions">
+                            <a href="https://card-games-one.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary btn-sm">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                                <span class="lang" key="BTN_LIVE_DEMO">Démo en direct</span>
+                            </a>
+                            <a href="https://github.com/CodeX-Syndicate/Card_Games" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                    </path>
+                                </svg>
+                                <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flagship-card">
+                        <div class="flagship-top">
+                            <div class="flagship-meta">
+                                <span class="live-badge">
+                                    <span class="pulse-dot"></span>
+                                    <span class="lang" key="BADGE_LIVE">En ligne</span>
+                                </span>
+                                <span class="org-badge codex">CodeX Syndicate</span>
+                            </div>
+                            <h3 class="flagship-title">Orlog</h3>
+                            <p class="flagship-desc lang" key="CODEX_ORLOG_DESC">
+                                Adaptation numérique du célèbre jeu de dés viking et de faveurs divines inspiré
+                                d'Assassin's Creed Valhalla.
+                            </p>
+                        </div>
+                        <div class="flagship-actions">
+                            <a href="https://orlog-nine.vercel.app" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary btn-sm">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                                <span class="lang" key="BTN_LIVE_DEMO">Démo en direct</span>
+                            </a>
+                            <a href="https://github.com/CodeX-Syndicate/Orlog" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-secondary btn-sm">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                    </path>
+                                </svg>
+                                <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="projects-section container">
+            <div class="section-header">
+                <h2 class="section-title lang" key="PROJECTS_SECTION_TITLE">Projets & Réalisations</h2>
+                <p class="section-sub lang" key="PROJECTS_SECTION_SUB">Une vitrine complète de mes créations
+                    personnelles et des projets phares de CodeX Syndicate.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="lang" key="FILTER_ALL">Tous les projets</span>
+                </button>
+                <button class="filter-btn" data-filter="codex">
+                    <span class="lang" key="FILTER_CODEX">CodeX Syndicate</span>
+                </button>
+                <button class="filter-btn" data-filter="personal">
+                    <span class="lang" key="FILTER_PERSONAL">AlexShadow3</span>
+                </button>
+                <button class="filter-btn" data-filter="bots">
+                    <span class="lang" key="FILTER_BOTS">Bots Discord</span>
+                </button>
+                <button class="filter-btn" data-filter="games">
+                    <span class="lang" key="FILTER_GAMES">Jeux Vidéo</span>
+                </button>
+                <button class="filter-btn" data-filter="tools">
+                    <span class="lang" key="FILTER_TOOLS">Web & Outils</span>
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Heist Bot -->
+                <div class="project-card" data-category="personal bots games">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge alex">AlexShadow3</span>
+                            <span class="type-pill">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z" />
+                                </svg>
+                                Discord Game Bot
+                            </span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_HEIST_TITLE">Heist Bot</h3>
+                        <p class="project-desc lang" key="PROJ_HEIST_DESC">
+                            Bot Discord RPG complet : braquages virtuels, économie fictive équilibrée, inventaire
+                            d'objets, vols entre joueurs et coffres-forts sécurisés.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Database</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/AlexShadow3/heist-bot" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                        <a href="/heist-bot/conditions.html" class="btn btn-secondary btn-sm">
+                            <span class="lang" key="VIEW_TOS">CGU & Politique</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Games (CodeX) -->
+                <div class="project-card" data-category="codex games">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge codex">CodeX Syndicate</span>
+                            <span class="live-badge">
+                                <span class="pulse-dot"></span>
+                                <span class="lang" key="BADGE_LIVE">En ligne</span>
+                            </span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_CARD_GAMES_TITLE">Card Games</h3>
+                        <p class="project-desc lang" key="CODEX_CARD_GAMES_DESC">
+                            Plateforme web de jeux de cartes interactifs déployée en ligne sur Vercel.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vercel</span>
+                            <span class="tech-tag">HTML5 Canvas</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://card-games-one.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <span class="lang" key="BTN_LIVE_DEMO">Démo en direct</span>
+                        </a>
+                        <a href="https://github.com/CodeX-Syndicate/Card_Games" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Orlog (CodeX) -->
+                <div class="project-card" data-category="codex games">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge codex">CodeX Syndicate</span>
+                            <span class="live-badge">
+                                <span class="pulse-dot"></span>
+                                <span class="lang" key="BADGE_LIVE">En ligne</span>
+                            </span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_ORLOG_TITLE">Orlog</h3>
+                        <p class="project-desc lang" key="CODEX_ORLOG_DESC">
+                            Adaptation numérique du célèbre jeu de dés viking et de faveurs divines inspiré d'Assassin's
+                            Creed Valhalla.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vercel</span>
+                            <span class="tech-tag">Game Logic</span>
+                            <span class="tech-tag">CSS Animations</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://orlog-nine.vercel.app" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <span class="lang" key="BTN_LIVE_DEMO">Démo en direct</span>
+                        </a>
+                        <a href="https://github.com/CodeX-Syndicate/Orlog" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Battleship Bot -->
+                <div class="project-card" data-category="personal bots games">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge alex">AlexShadow3</span>
+                            <span class="type-pill">Discord Game Bot</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_BATTLESHIP_TITLE">Battleship Bot</h3>
+                        <p class="project-desc lang" key="PROJ_BATTLESHIP_DESC">
+                            Jeu de Bataille Navale tactique au tour par tour directement intégré dans vos salons de
+                            discussion Discord.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">Board Logic</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/AlexShadow3/battleship-bot" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AeroHear (CodeX) -->
+                <div class="project-card" data-category="codex tools">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge codex">CodeX Syndicate</span>
+                            <span class="type-pill">C# Application</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_AEROHEAR_TITLE">AeroHear</h3>
+                        <p class="project-desc lang" key="CODEX_AEROHEAR_DESC">
+                            Lecteur audio Bluetooth multi-périphériques développé en C# pour un contrôle simultané.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">Bluetooth API</span>
+                            <span class="tech-tag">Audio Architecture</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/CodeX-Syndicate/AeroHear" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- QR Generator -->
+                <div class="project-card" data-category="personal tools">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge alex">AlexShadow3</span>
+                            <span class="live-badge">
+                                <span class="pulse-dot"></span>
+                                <span class="lang" key="BADGE_LIVE">En ligne</span>
+                            </span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_QR_TITLE">Générateur QR Codes</h3>
+                        <p class="project-desc lang" key="PROJ_QR_DESC">
+                            Générateur de QR codes instantané et respectueux de la vie privée avec prévisualisation en
+                            direct, copie presse-papier et téléchargement HD.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3 Glassmorphism</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="/qrcode/qrcode.html" class="btn btn-primary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                            <span class="lang" key="BTN_LIVE_DEMO">Démo en direct</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sogalen -->
+                <div class="project-card" data-category="personal bots">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge alex">AlexShadow3</span>
+                            <span class="type-pill">Discord Bot</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_SOGALEN_TITLE">Sogalen</h3>
+                        <p class="project-desc lang" key="PROJ_SOGALEN_DESC">
+                            Bot Discord multifonctions en JavaScript moderne dédié à l'animation de communauté, à la
+                            modération et aux mini-jeux.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Discord.js</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/AlexShadow3/Sogalen" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Max-Power (CodeX) -->
+                <div class="project-card" data-category="codex games tools">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge codex">CodeX Syndicate</span>
+                            <span class="type-pill">C# Application</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_MAXPOWER_TITLE">Max-Power</h3>
+                        <p class="project-desc lang" key="CODEX_MAXPOWER_DESC">
+                            Projet utilitaire et interactif haute performance développé en C#.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">Architecture</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/CodeX-Syndicate/Max-Power" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HexGame (CodeX) -->
+                <div class="project-card" data-category="codex games">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge codex">CodeX Syndicate</span>
+                            <span class="type-pill">Strategy Game</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_HEXGAME_TITLE">HexGame</h3>
+                        <p class="project-desc lang" key="CODEX_HEXGAME_DESC">
+                            Jeu de réflexion et de stratégie sur grille hexagonale en pur JavaScript.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Hex Grid</span>
+                            <span class="tech-tag">Game Logic</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/CodeX-Syndicate/HexGame" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TaeKwonDo API & Plugin -->
+                <div class="project-card" data-category="personal tools">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge alex">AlexShadow3</span>
+                            <span class="type-pill">REST API & Plugin</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_TKD_TITLE">TaeKwonDo API & Plugin</h3>
+                        <p class="project-desc lang" key="PROJ_TKD_DESC">
+                            L'API française de référence sur le TaeKwonDo, recensant techniques officielles, poumsés,
+                            positions et lexique martial complet.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/AlexShadow3/TaeKwonDo_API" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span>API</span>
+                        </a>
+                        <a href="https://github.com/AlexShadow3/TaeKwonDo" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <span>Plugin</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Color Picker (CodeX) -->
+                <div class="project-card" data-category="codex tools">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge codex">CodeX Syndicate</span>
+                            <span class="type-pill">Web Utility</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_COLORPICKER_TITLE">Color Picker</h3>
+                        <p class="project-desc lang" key="CODEX_COLORPICKER_DESC">
+                            Outil web moderne d'exploration de palettes et de conversion de couleurs.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Hex/RGB/HSL</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/CodeX-Syndicate/Color_Picker" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Scooby-Doo: MANS -->
+                <div class="project-card" data-category="personal games">
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="org-badge alex">AlexShadow3</span>
+                            <span class="type-pill">Adventure Game</span>
+                        </div>
+                        <h3 class="project-title lang" key="PROJ_SCOOBY_TITLE">Scooby-Doo: MANS</h3>
+                        <p class="project-desc lang" key="PROJ_SCOOBY_DESC">
+                            Mysteries Are Never Solved : projet de jeu narratif d'aventure et de résolution d'énigmes
+                            développé en équipe.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Game Design</span>
+                            <span class="tech-tag">Storytelling</span>
+                            <span class="tech-tag">Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/AlexShadow3/ScoobyDooMANS" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                                </path>
+                            </svg>
+                            <span class="lang" key="BTN_GITHUB">Dépôt GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section container">
+            <div class="section-header">
+                <h2 class="section-title lang" key="SKILLS_TITLE">Compétences & Technologies</h2>
+                <p class="section-sub lang" key="SKILLS_SUB">Langages, frameworks et outils mobilisés au quotidien.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="cat-title lang" key="SKILL_CAT_LANG">Langages de programmation</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">JavaScript (ES6+)</span>
+                        <span class="skill-chip">C#</span>
+                        <span class="skill-chip">HTML5</span>
+                        <span class="skill-chip">CSS3</span>
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">Markdown</span>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="cat-title lang" key="SKILL_CAT_FRAMEWORKS">Écosystème & Frameworks</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Node.js</span>
+                        <span class="skill-chip">Discord.js</span>
+                        <span class="skill-chip">.NET Framework</span>
+                        <span class="skill-chip">REST APIs</span>
+                        <span class="skill-chip">Vercel Deployment</span>
+                        <span class="skill-chip">DOM & Web APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="cat-title lang" key="SKILL_CAT_DOMAINS">Domaines d'expertise</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Responsive Web Design</span>
+                        <span class="skill-chip">Game Logic & State</span>
+                        <span class="skill-chip">Turn-based Games</span>
+                        <span class="skill-chip">Open Source Synergy</span>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="cat-title lang" key="SKILL_CAT_TOOLS">Outils & Plateformes</h3>
+                    </div>
+                    <div class="skill-chips">
+                        <span class="skill-chip">Git & GitHub</span>
+                        <span class="skill-chip">GitHub Pages</span>
+                        <span class="skill-chip">VS Code</span>
+                        <span class="skill-chip">Visual Studio</span>
+                        <span class="skill-chip">npm / yarn</span>
+                        <span class="skill-chip">Canvas API</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section container">
+            <div class="contact-box">
+                <h2 class="contact-title lang" key="CONTACT_TITLE">Restons en contact</h2>
+                <p class="contact-sub lang" key="CONTACT_SUB">Envie d'échanger sur un projet ou de collaborer ?
+                    Retrouvez-moi sur les différentes plateformes.</p>
+
+                <div class="contact-links">
+                    <a href="https://github.com/AlexShadow3" target="_blank" rel="noopener noreferrer"
+                        class="contact-link-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                            </path>
+                        </svg>
+                        <div class="contact-link-info">
+                            <div class="contact-link-name">GitHub (@AlexShadow3)</div>
+                            <div class="contact-link-meta lang" key="CONTACT_GITHUB_TEXT">Explorer mes dépôts et
+                                contributions</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/CodeX-Syndicate" target="_blank" rel="noopener noreferrer"
+                        class="contact-link-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color: var(--codex-accent);">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="12 8 8 12 12 16 16 12 12 8"></polygon>
+                        </svg>
+                        <div class="contact-link-info">
+                            <div class="contact-link-name">CodeX Syndicate</div>
+                            <div class="contact-link-meta lang" key="CONTACT_CODEX_TEXT">Découvrir les projets
+                                collectifs</div>
+                        </div>
+                    </a>
+
+                    <a href="/qrcode/qrcode.html" class="contact-link-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color: var(--accent-cyan);">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        <div class="contact-link-info">
+                            <div class="contact-link-name">QR Generator</div>
+                            <div class="contact-link-meta">Outil intégré en direct</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 AlexShadow3</p>
+        <div class="container footer-content">
+            <p class="lang" key="FOOTER_TEXT">© 2026 Alexandre Bobis (AlexShadow3). Conçu avec passion & propulsé par
+                CodeX Syndicate.</p>
+            <ul class="footer-links">
+                <li><a href="#portfolio" class="lang" key="NAV_PORTFOLIO">Portfolio</a></li>
+                <li><a href="#codex" class="lang" key="NAV_CODEX">CodeX Syndicate</a></li>
+                <li><a href="#projects" class="lang" key="NAV_PROJECTS">Projets</a></li>
+                <li><a href="/qrcode/qrcode.html" class="lang" key="NAV_QR_CODES">QR Codes</a></li>
+                <li><a href="/heist-bot/conditions.html" class="lang" key="NAV_HEIST_TOS">Heist Bot CGU</a></li>
+                <li><a href="/heist-bot/confidentialite.html" class="lang" key="NAV_HEIST_PRIVACY">Heist Bot
+                        Confidentialité</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
+
 </html>
-<!-- http://alexshadow3.github.io/-->
