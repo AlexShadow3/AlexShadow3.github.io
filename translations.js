@@ -15,6 +15,8 @@ export const translations = {
         // Hero Section
         "HERO_BADGE": "Full-Stack Developer & Game Creator",
         "HERO_TITLE": "Alexandre Bobis",
+        "HERO_ROLE": "Software Developer",
+        "HERO_DESC": "Software developer and active member of the <strong>CodeX Syndicate</strong> collective. Passionate about crafting applications, immersive web games, and modern digital tools.",
         "HERO_SUBTITLE": "Software developer, Discord bot architect, and active member of the <strong>CodeX Syndicate</strong> collective. Designing immersive web games, resilient bots, and modern digital tools.",
         "HERO_BTN_PROJECTS": "Explore Projects",
         "HERO_BTN_CODEX": "CodeX Syndicate",
@@ -85,9 +87,16 @@ export const translations = {
         "BTN_LIVE_DEMO": "Live Demo",
         "BTN_GITHUB": "Repository",
         "BTN_MORE_INFO": "More Details",
+        "VIEW_TOS": "TOS & Privacy",
         "BADGE_CODEX": "CodeX Syndicate",
         "BADGE_PERSONAL": "AlexShadow3",
         "BADGE_LIVE": "Live App",
+        "PILL_DISCORD_GAME_BOT": "Discord Game Bot",
+        "PILL_CSHARP_APP": "C# Application",
+        "PILL_DISCORD_BOT": "Discord Bot",
+        "PILL_STRATEGY_GAME": "Strategy Game",
+        "PILL_API_PLUGIN": "REST API & Plugin",
+        "PILL_ADVENTURE_GAME": "Adventure Game",
 
         // Skills Section
         "SKILLS_TITLE": "Skills & Technologies",
@@ -96,12 +105,17 @@ export const translations = {
         "SKILL_CAT_FRAMEWORKS": "Ecosystem & Frameworks",
         "SKILL_CAT_DOMAINS": "Core Domains",
         "SKILL_CAT_TOOLS": "Dev Tools & Platforms",
+        "SKILL_DOMAIN_RESPONSIVE": "Responsive Web Design",
+        "SKILL_DOMAIN_GAMELOGIC": "Game Logic & State",
+        "SKILL_DOMAIN_TURNBASED": "Turn-based Games",
+        "SKILL_DOMAIN_OPENSOURCE": "Open Source Synergy",
 
         // Contact Section
         "CONTACT_TITLE": "Let's Connect",
         "CONTACT_SUB": "Interested in collaborating or discussing projects? Find me across the web.",
         "CONTACT_GITHUB_TEXT": "Browse open source repositories & contributions",
         "CONTACT_CODEX_TEXT": "Discover collaborative games and utilities with CodeX Syndicate",
+        "CONTACT_QR_TEXT": "Built-in live generator tool",
 
         // Footer
         "FOOTER_TEXT": "© 2026 Alexandre Bobis (AlexShadow3). Crafted with passion and CodeX Syndicate synergy.",
@@ -180,6 +194,8 @@ export const translations = {
         // Hero Section
         "HERO_BADGE": "Développeur Full-Stack & Créateur de Jeux",
         "HERO_TITLE": "Alexandre Bobis",
+        "HERO_ROLE": "Développeur Logiciel",
+        "HERO_DESC": "Développeur logiciel et membre actif du collectif <strong>CodeX Syndicate</strong>. Passionné par la création d'applications, de jeux web immersifs, et d'outils numériques modernes.",
         "HERO_SUBTITLE": "Développeur logiciel, architecte de bots Discord et membre actif du collectif <strong>CodeX Syndicate</strong>. Passionné par la création de jeux web immersifs, de bots robustes et d'outils numériques modernes.",
         "HERO_BTN_PROJECTS": "Découvrir les projets",
         "HERO_BTN_CODEX": "CodeX Syndicate",
@@ -250,9 +266,16 @@ export const translations = {
         "BTN_LIVE_DEMO": "Démo en direct",
         "BTN_GITHUB": "Dépôt GitHub",
         "BTN_MORE_INFO": "Détails",
+        "VIEW_TOS": "CGU & Politique",
         "BADGE_CODEX": "CodeX Syndicate",
         "BADGE_PERSONAL": "AlexShadow3",
         "BADGE_LIVE": "En ligne",
+        "PILL_DISCORD_GAME_BOT": "Bot de Jeu Discord",
+        "PILL_CSHARP_APP": "Application C#",
+        "PILL_DISCORD_BOT": "Bot Discord",
+        "PILL_STRATEGY_GAME": "Jeu de Stratégie",
+        "PILL_API_PLUGIN": "API REST & Plugin",
+        "PILL_ADVENTURE_GAME": "Jeu d'Aventure",
 
         // Skills Section
         "SKILLS_TITLE": "Compétences & Technologies",
@@ -261,12 +284,17 @@ export const translations = {
         "SKILL_CAT_FRAMEWORKS": "Écosystème & Frameworks",
         "SKILL_CAT_DOMAINS": "Domaines d'expertise",
         "SKILL_CAT_TOOLS": "Outils & Plateformes",
+        "SKILL_DOMAIN_RESPONSIVE": "Design Web Responsive",
+        "SKILL_DOMAIN_GAMELOGIC": "Logique de Jeu & États",
+        "SKILL_DOMAIN_TURNBASED": "Jeux au Tour par Tour",
+        "SKILL_DOMAIN_OPENSOURCE": "Synergie Open Source",
 
         // Contact Section
         "CONTACT_TITLE": "Restons en contact",
         "CONTACT_SUB": "Envie d'échanger sur un projet ou de collaborer ? Retrouvez-moi sur les différentes plateformes.",
         "CONTACT_GITHUB_TEXT": "Explorer mes dépôts open source et contributions",
         "CONTACT_CODEX_TEXT": "Découvrir les projets collectifs et jeux CodeX Syndicate",
+        "CONTACT_QR_TEXT": "Outil intégré en direct",
 
         // Footer
         "FOOTER_TEXT": "© 2026 Alexandre Bobis (AlexShadow3). Conçu avec passion & propulsé par CodeX Syndicate.",

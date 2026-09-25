@@ -1,20 +1,19 @@
 import { translations } from './translations.js';
 
 // Language switcher
-const langButtons = document.querySelectorAll('.translate');
-const langElements = document.querySelectorAll('.lang');
-
 export function setLanguage(lang) {
-    localStorage.setItem('preferredLang', lang);
+    try {
+        localStorage.setItem('preferredLang', lang);
+    } catch (e) {}
     window.currentLanguage = lang;
 
     // Update active state on buttons
-    langButtons.forEach(btn => {
+    document.querySelectorAll('.translate').forEach(btn => {
         btn.classList.toggle('active', btn.id === lang);
     });
 
     // Translate DOM elements
-    langElements.forEach(element => {
+    document.querySelectorAll('.lang').forEach(element => {
         const key = element.getAttribute('key');
         if (translations[lang] && translations[lang][key]) {
             element.innerHTML = translations[lang][key];
@@ -25,8 +24,10 @@ export function setLanguage(lang) {
     document.documentElement.lang = lang.startsWith('en') ? 'en' : 'fr';
 }
 
+window.setLanguage = setLanguage;
+
 // Add event listeners for language selection
-langButtons.forEach(button => {
+document.querySelectorAll('.translate').forEach(button => {
     button.addEventListener('click', () => {
         setLanguage(button.id);
     });
